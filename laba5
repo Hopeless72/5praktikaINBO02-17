@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+void sortirovka(int arr[],int n){for(int i=0;i<n;i++)      for(int j;j<n-1;j++){        int cat = arr[j];        arr[j]=arr[j+1];        arr[j+1] = cat;    }    for (int k=0;k<n;k++) cout<<arr[k]<<endl;}
+void sortirovka(float arr[],int n){for(int i=0;i<n;i++)      for(int j;j<n-1;j++){        float cat = arr[j];        arr[j]=arr[j+1];        arr[j+1] = cat;
+    }   for (int k=0;k<n;k++) cout<<arr[k]<<endl;}
+void sortirovka(double arr[],int n){for(int i=0;i<n;i++)      for(int j;j<n-1;j++){        double cat = arr[j];        arr[j]=arr[j+1];        arr[j+1] = cat;    }   for (int k=0;k<n;k++) cout<<arr[k]<<endl;}
+int main(){ int n,chint; float chfloat; double chdouble;
+   cout<<"Enter n:"<<endl;   cin>>n;   int *arr1 = new int [n];   float *arr2= new float[n];   double *arr3= new double[n];
+   cout<<"Fill int"<<endl;   for(int i=0;i<n;i++){    cin>>chint;    arr1[i]=chint;   }   cout<<"Fill float"<<endl;   for(int i=0;i<n;i++){    cin>>chfloat;    arr2[i]=chfloat;   }   cout<<"Fill double"<<endl;   for(int i=0;i<n;i++){    cin>>chdouble;    arr3[i]=chdouble;   }   sortirovka(arr1,n);   cout<<endl;   sortirovka(arr2,n);   cout<<endl;   sortirovka(arr3,n);   cout<<endl;    return 0;}
